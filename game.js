@@ -321,7 +321,7 @@ const textNodes = [
   },
   {
     id: 23,
-    text: 'OK whoever came this let me know lmao. DM me a sheep emoji or something. Thanks for playing!',
+    text: 'OK whoever came this far let me know lmao. DM me a sheep emoji or something. Thanks for playing!',
     options: [
       {
         text: 'Restart',
