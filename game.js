@@ -9,7 +9,39 @@ function startGame() {
   showTextNode(1)
 }
 function showTextNode(textNodeIndex) {
+
+  var imagesDatabase = {
+    '1': src="images/mine.gif",
+    '2': src="images/sadbro.png",
+    '3':src="images/bs1.jpg",
+    '4': src="images/thechoices.png",
+    '5': src="images/coffin.jpg",
+    '6': src="images/tiger.jpg",
+    '7': src="images/coffin.jpg",
+    '8': src="images/sword.jpg",
+    '9': src="images/coffin.jpg",
+    '10': src="images/shoe.jpg",
+    '11': src="images/bee.jpg",
+    '12': src="images/fire.gif",
+    '13': src="images/coffin.jpg",
+    '14': src="images/coffin.jpg",
+    '16': src="images/sheep.jpg",
+    '17': src="images/gunsheep.jpg",
+    '18': src="images/gunsheep.jpg",
+    '19': src="images/beep.gif",
+    '20': src="images/beep.gif",
+    '21': src="images/beep.gif",
+    '22': src="images/beep.gif",
+    '23': src="images/beep.gif",
+    
+
+
+} 
+
+  var theImageDiv = document.createElement('div');
+  theImageDiv.innerHTML = "<img id='the-image-bro' src='" + imagesDatabase[textNodeIndex] + "' height=150 width=300 style='position: fixed; top: 3%; right: 14%'>"
   
+  document.getElementById('imagediv').appendChild(theImageDiv);
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
   textElement.innerText = textNode.text
   while (optionButtonsElement.firstChild) {
@@ -44,6 +76,7 @@ const textNodes = [
   {
     id: 1,
     text: 'Bro Listen na',
+    image: 'https://i.imgur.com/5lhCbGv.jpg',
     options: [
       {
         text: 'Ya say',
@@ -58,6 +91,7 @@ const textNodes = [
   {
     id: 2,
     text: ':(',
+    image: 'https://i.pinimg.com/originals/09/ef/32/09ef32e0bae53a4a268ae7e82dd2a9d2.png',
     options: [
       {
         text: 'Okay say',
@@ -77,7 +111,7 @@ const textNodes = [
   },
   {
     id: 4,
-    text: 'Imagine you are on an island. You were on a ship or something and it got rekt and now you are on the island somehow. It has like lions and tigers and other animals. You managed to grab one item from the ship before it got rekt. Which one is it',
+    text: 'Imagine you are on an island. You were on a ship and it got rekt and now you are on the island somehow. It has like lions and tigers and other animals. You managed to grab one item from the ship before it got rekt. Which one is it?',
     options: [
 
       {
@@ -134,7 +168,7 @@ const textNodes = [
   },
   {
     id: 7,
-    text: 'WHAT HAVE YOU DONE. TIGER HAS SUPER SENSES AND HEARD YOU MOVE. THE TIGER GOT ANGRY AND KILLED YOU. CMON MAN',
+    text: 'WHAT HAVE YOU DONE. THE TIGER HAS SUPER SENSES AND HEARD YOU MOVE. THE TIGER GOT ANGRY AND KILLED YOU. CMON MAN',
     options: [
       {
          text: 'Restart',
@@ -157,7 +191,7 @@ const textNodes = [
   },
   {
     id: 9,
-    text: 'Look at Bolt over here tryna outrun a tiger. You ded',
+    text: 'Look at Bolt over here tryna outrun a tiger. You died',
     options: [
       {
         text: 'Restart',
@@ -200,7 +234,7 @@ const textNodes = [
   },
   {
     id: 12,
-    text: 'HELL YEAH BUDDY. You slice that lil bee in half. The other bees got scared and ran away. Good job',
+    text: 'HELL YEAH BUDDY. Your sword turns into a fire sword or whatever that is and you burn that little shit alive. The other bees get scared and run away. Good job',
     options: [
       {
         text: 'Aight who is next.',
@@ -262,7 +296,7 @@ const textNodes = [
   },
   {
     id: 18,
-    text: 'Sheep do not need your scarf to look cooler. They shoot you with a gun. Mess with the flock you get the glock',
+    text: 'Sheep do not need your scarf to look cooler. Mess with the flock you get the glock',
     options: [
       {
         text: 'Restart',
@@ -321,7 +355,7 @@ const textNodes = [
   },
   {
     id: 23,
-    text: 'OK whoever came this far let me know lmao. DM me a sheep emoji or something. Thanks for playing!',
+    text: 'OK whoever came this let me know lmao. DM me a sheep emoji or something. Thanks for playing!',
     options: [
       {
         text: 'Restart',
