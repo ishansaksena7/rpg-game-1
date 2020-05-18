@@ -39,7 +39,7 @@ function showTextNode(textNodeIndex) {
 } 
 
   var theImageDiv = document.createElement('div');
-  theImageDiv.innerHTML = "<img id='the-image-bro' src='" + imagesDatabase[textNodeIndex] + "' height=150 width=500 style='position: fixed; top: 3%; right: 14%'>"
+  theImageDiv.innerHTML = "<img id='the-image-bro' src='" + imagesDatabase[textNodeIndex] + "' height=150 width=300 style='position: fixed; top: 3%; right: 14%'>"
   
   document.getElementById('imagediv').appendChild(theImageDiv);
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
