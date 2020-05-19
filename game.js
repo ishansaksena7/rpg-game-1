@@ -30,9 +30,23 @@ function showTextNode(textNodeIndex) {
     '18': src="images/gunsheep.jpg",
     '19': src="images/beep.gif",
     '20': src="images/beep.gif",
-    '21': src="images/beep.gif",
-    '22': src="images/beep.gif",
-    '23': src="images/beep.gif",
+    '21': src="images/hellokai.gif",
+    '22': src="images/kairiddle.gif",
+    '23': src="images/kairiddle.gif",
+    '24': src="images/bs1.jpg",
+    '25': src="images/cave.jpg",
+    '26': src="images/kailaugh.gif",
+    '27': src="images/kairiddle.gif",
+    '28': src="images/kailaugh.gif",
+    '29': src="images/kairiddle.gif",
+    '30': src="images/kailaugh.gif",
+    '31': src="images/kaigif.gif",
+    '32': src="images/kaigif.gif",
+    '33': src="images/drago.gif",
+    '34': src="images/coffin.jpg",
+    '35': src="images/wooloo.jpg",
+    '36': src="images/winwin.gif",
+    '37': src="images/tombstone.jpg",
     
 
 
@@ -117,17 +131,17 @@ const textNodes = [
       {
         text: 'A badass sword',
         setState: { sword: true },
-        nextText: 6
+        nextText: 24
       },
       {
         text: 'A cool looking scarf thingy',
         setState: { scarf: true },
-        nextText: 6
+        nextText: 24
       },
       {
         text: 'Some rad sneakers',
         setState: { shoes: true },
-        nextText: 6
+        nextText: 24
       },
       {
         text: 'Stop imagining',
@@ -310,6 +324,7 @@ const textNodes = [
     options: [
       {
         text: 'I think they are cool too.',
+        setState: { glasses: true },
         nextText: 20
       }  
       
@@ -317,52 +332,263 @@ const textNodes = [
   },
   {
     id: 20,
-    text: 'YOU DID IT. YOU COMPLETED THE GAME. Thank you for playing. You can exit now ',
+    text: 'You are now friends with the sheep. They give you some cool glasses. Time to explore Again ',
     options: [
       {
-        text: 'Ishan you are so cool',
-        nextText: 21
+        text: 'Go into the cave',
+        nextText: 25
       },
       
       
       {
-        text: 'Aight imma try again tho',
-        nextText: -1
+        text: 'Go right towards the town',
+        nextText: 21
       }  
       
     ]
   },
   {
     id: 21,
-    text: 'Really?',
+    text: '"Greetings! We are looking for a new ruler. Someone smart and cool. Come back when you have something cool to show us. ',
     options: [
       {
-        text: 'Yeah you are smart too',
+        text: 'Go back to the start',
+        nextText: 24
+      },
+      {
+        text: 'Put on the glasses',
+        requiredState: (currentState) => currentState.glasses,
         nextText: 22
-      }  
+      },
+
       
     ]
   },
   {
     id: 22,
-    text: 'Wow thanks. You can just exit now tho',
+    text: 'Holy shit, those are some cool glasses you got there. But are you smart enough to answer my riddles?',
     options: [
       {
-        text: 'Nah I wanna appreciate you more',
+        text: 'Hell yea',
         nextText: 23
       }  
     ]
   },
   {
     id: 23,
-    text: 'OK whoever came this far let me know lmao. DM me a sheep emoji or something. Thanks for playing!',
+    text: 'Pick me up and scratch my head. I’ll turn red and then black. What am I? ',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Jamal',
+        nextText: 26
+      },
+      {
+        text: 'A matchstick',
+        nextText: 27
+      },
+      {
+        text: 'A chameleon',
+        nextText: 26
+      }
+    ]
+  },
+  {
+    id: 24,
+    text: 'Time to explore the island. Which way do you want to go?',
+    options: [
+
+      {
+        text: 'Ahead towards the jungle',
+        nextText: 6
+      },
+      {
+        text: 'Left towards the cave',
+        nextText: 25
+      },
+      {
+        text: 'Right towards the town',
+        nextText: 21
+      }
+    ]
+  },
+  {
+    id: 25,
+    text: 'There is a cave ahead. There seems to be something scary inside. Maybe you should wait a bit before going in ',
+    options: [
+    {
+      text: 'Go back',
+      nextText: 24
+    },
+    {
+      text: 'Super sword time',
+      requiredState: (currentState) => currentState.supersword,
+      nextText: 33
+    },
+    {
+      text: 'I will just call my new friends for help',
+      requiredState: (currentState) => currentState.glasses,
+      nextText: 37
+    }
+
+    ]
+  },
+  {
+    id: 26,
+    text: 'Wrong answer. Try again man.',
+    options: [
+      {
+        text: 'One more try',
+        nextText: 23
       }  
     ]
   },
+  {
+    id: 27,
+    text: 'Owow smart. Ok next one. What room do ghosts avoid? ',
+    options: [
+      {
+        text: 'Classroom',
+        nextText: 28
+      },
+      {
+        text: 'Room of prayer',
+        nextText: 28
+      },
+      {
+        text: 'Living room',
+        nextText: 29
+      }
+    ]
+  },
+  {
+    id: 28,
+    text: 'Wrong choice mate.',
+    options: [
+      {
+        text: 'One more try',
+        nextText: 27
+      }  
+    ]
+  },
+  {
+    id: 29,
+    text: 'Last one. How cool is Ishan?',
+    options: [
+      {
+        text: 'Very cool',
+        nextText: 31
+      },
+      {
+        text: 'Cool enough',
+        nextText: 30
+      },
+      {
+        text: 'Eh',
+        nextText: 30
+      }
+    ]
+  },
+  {
+    id: 30,
+    text: 'Hahahah unless?',
+    options: [
+      {
+        text: 'Smh Ishan',
+        nextText: 29
+      }  
+    ]
+  },
+  {
+    id: 31,
+    text: 'Amazing! Genius! You are fit to be our new ruler. But a ruler should be brave as well. There is a cave nearby where a dragon lives. He burns our crops and eats our people. Can you defeat him for us? ',
+    options: [
+      {
+        text: 'Uh sure',
+        setState: { supersword: true },
+        nextText: 32
+      }, 
+    ]
+  },
+  {
+    id: 32,
+    text: 'Brilliant! I have modified your sword and made it stronger! You will have to answer a math question to charge it. Go slay the dragon!',
+    options: [
+      {
+        text: 'Leggo',
+        nextText: 25
+      }, 
+    ]
+  },
+  {
+    id: 33,
+    text: 'The dragon emerges. He is angry! You activate your sword. What is 21 x 7? ',
+      options: [
+        {
+          text: '161! Slaying time!',
+          nextText: 34
+        },
+        {
+          text: '147! Fear me monster!',
+          nextText: 36
+        },
+        {
+          text: '2 lmao just kill me i cant math',
+          nextText: 35
+        }
+      ]
+    },
+    {
+      id: 34,
+      text: 'bro you got burned alive. Cmon smh. You lose',
+      options: [
+        {
+          text: 'Restart',
+          nextText: -1
+        }  
+      ]
+    },
+    {
+      id: 35,
+      text: 'You start to run away as the math was hard. Just as the dragon is about to get you, BANG. The dragon is shot by the sheep you met earlier. The tiger pounces on the dragon and tries to finish it off, but the dragon uses his fire to burn one of the sheep. Ogod. The dragon died and you are the new ruler of the island. BUT AT WHAT COST? [WIN ENDING 1 OF 3]',
+      options: [
+        {
+          text: 'Aight Imma try again',
+          nextText: -1
+        }  
+      ]
+    },
+    {
+      id: 36,
+      text: 'The sword powers up. The dragon is no match for your might and intellect. He is defeated and you become the new ruler of the island. You rule with your friends, the tiger and the flock of sheep. Happy Happy. [WIN ENDING 2 OF 3] ',
+      options: [
+        {
+          text: 'Aight Imma try again',
+          nextText: -1
+        }  
+      ]
+    },
+    {
+      id: 37,
+      text: 'You enter the cave with the tiger and the glockflock. THERE IS A DRAGON THERE. The sheep open fire on it but it burns away 2 of them. You attack with your sword but it does almost no damage. The tiger sacrifices himself to save you. The last sheep shoots the dragon and kills him. But he does not want to live in a world without the other sheep, so he kills himself. You should have gone in more prepared. Congrats, dragon slayer. The villagers from the town next to the cave appoint you the ruler of the island. You won, but can you even call that a Victory? [WIN ENDING 3 of 3] ',
+      options: [
+        {
+          text: 'Aight Imma try again',
+          nextText: -1
+        }  
+      ]
+    },
+
+
+
+
+  
+
+
+
+
+
+
+
 ]
 
 
